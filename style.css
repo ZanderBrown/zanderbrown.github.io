@@ -1,0 +1,118 @@
+body, html {
+	height: 100%;
+}
+
+body, html, h1 {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	background: #3c6332;
+	padding-top: 4rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-bottom: 0.5rem;
+}
+
+header h1 {
+	display: inline;
+	color: white;
+}
+
+aside {
+	margin: 1rem;
+	text-align: right;
+	flex-shrink: 0;
+	min-width: 10rem;
+}
+
+nav ul {
+	margin: 5px;
+	padding: 0;
+	list-style: none;
+	
+}
+
+nav ul a {
+	color: white;
+	text-decoration: none;
+}
+
+nav ul li {
+	margin: 5px 0;
+	padding: 4px;
+	border: 1px solid black;
+	border-radius: 3px;
+	background: #3630e6;
+	transition: 0.1s box-shadow;
+}
+
+nav ul li:hover {
+	background: #2f28fa;
+	box-shadow: 0 1px 1px #555;
+}
+
+main {
+	max-width: 45rem;
+	margin-right: 1rem;
+}
+
+footer {
+	padding: 1rem;
+	background: black;
+	color: white;
+	flex-shrink: 0;
+}
+
+.avatar {
+	width: 6rem;
+}
+
+.wrapper {
+	flex: 1 0 auto;
+	display: flex;
+	flex-direction: row;
+}
+
+@media only screen and (max-width: 30rem) {
+	.wrapper {
+		flex-direction: column-reverse;
+	}
+
+	main {
+		margin: 1rem;
+		margin-bottom: 0;
+	}
+}
+
+.project .icon, .project .icon img {
+	width: 3rem;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.project {
+	text-decoration: none;
+}
+
+.project table {
+	color: black;
+	background: #DDD;
+	border: 1px solid #999;
+	border-radius: 3px;
+	width: 100%;
+	transition: 0.1s box-shadow;
+	padding: 2px;
+	margin: 5px;
+}
+
+.project table:hover {
+	background: #EEE;
+	box-shadow: 0 1px 1px #555;
+}

@@ -12,6 +12,10 @@ body {
 	flex-direction: column;
 }
 
+a {
+	color: #613583;
+}
+
 header {
 	background: #3c6332;
 	padding-top: 4rem;
@@ -49,12 +53,12 @@ nav ul li {
 	padding: 4px;
 	border: 1px solid black;
 	border-radius: 3px;
-	background: #3630e6;
+	background: #613583;
 	transition: 0.1s box-shadow;
 }
 
 nav ul li:hover {
-	background: #2f28fa;
+	background: #522a70;
 	box-shadow: 0 1px 1px #555;
 }
 

@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 body, html {
 	height: 100%;
 }
@@ -5,6 +9,10 @@ body, html {
 body, html, h1 {
 	padding: 0;
 	margin: 0;
+}
+
+html {
+	background: #f6f5f4;
 }
 
 body {
@@ -36,36 +44,14 @@ aside {
 	min-width: 10rem;
 }
 
-nav ul {
-	margin: 5px;
-	padding: 0;
-	list-style: none;
-	
-}
-
-nav ul a {
-	color: white;
-	text-decoration: none;
-}
-
-nav ul li {
-	margin: 5px 0;
-	padding: 4px;
-	border: 1px solid black;
-	border-radius: 3px;
-	background: #613583;
-	transition: 0.1s box-shadow;
-}
-
-nav ul li:hover {
-	background: #522a70;
-	box-shadow: 0 1px 1px #555;
-}
-
 main {
-	max-width: 45rem;
+	max-width: 30rem;
 	margin-right: 1rem;
 	margin-bottom: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	flex-grow: 1;
 }
 
 footer {
@@ -83,9 +69,14 @@ footer {
 	flex: 1 0 auto;
 	display: flex;
 	flex-direction: row;
+	gap: 1rem;
+	background-image: url('z.svg');
+	background-repeat: no-repeat;
+	background-position: bottom 1rem right 1rem;
+	background-size: 20rem;
 }
 
-@media only screen and (max-width: 30rem) {
+@media print, only screen and (max-width: 30rem)  {
 	.wrapper {
 		flex-direction: column-reverse;
 	}
@@ -96,28 +87,60 @@ footer {
 	}
 }
 
-.project .icon, .project .icon img {
-	width: 3rem;
-	text-align: center;
-	vertical-align: middle;
+.blurb {
+	font-size: 1.2em;
 }
 
-.project {
+.icons, nav {
+	display: flex;
+	gap: 1rem;
+	flex-grow: wrap;
+	justify-content: space-evenly;
+}
+
+.icon img {
+	width: 6rem;
+	margin: 0;
+	padding: 0;
+}
+
+.icon {
+	border-radius: 0.25rem;
+	border: 1px solid #333;
+	background: #e3e3e3;
+	box-shadow: 0 0.05rem 0.1rem rgb(201, 201, 201);
+	transition: 0.25s ease-in-out box-shadow;
+}
+
+.icon:hover {
+	box-shadow: 0 0.15rem 0.25rem rgb(167, 167, 167);
+}
+
+nav {
+	justify-content: center;
+}
+
+nav a {
+	color: white;
 	text-decoration: none;
 }
 
-.project table {
-	color: black;
-	background: #DDD;
-	border: 1px solid #999;
+nav a {
+	margin: 5px 0;
+	padding: 4px;
+	border: 1px solid black;
 	border-radius: 3px;
-	width: 100%;
-	transition: 0.1s box-shadow;
-	padding: 2px;
-	margin: 5px;
+	background: #613583;
+	transition: 0.25s ease-in-out box-shadow;
 }
 
-.project table:hover {
-	background: #EEE;
-	box-shadow: 0 1px 1px #555;
+nav a:hover {
+	background: #522a70;
+	box-shadow: 0 0.15rem 0.25rem #555;
+}
+
+@media print {
+	.icons, nav {
+		display: none;
+	}
 }
